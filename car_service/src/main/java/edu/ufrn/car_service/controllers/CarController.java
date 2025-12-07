@@ -38,7 +38,7 @@ public class CarController {
         return ResponseEntity.ok(carService.listarDisponiveis());
     }
 
-    @PatchMapping("/{id}/status")
+    @PostMapping("/{id}/status")
     public ResponseEntity<Car> atualizarStatus(@PathVariable Long id,
                                                @RequestParam StatusCarro status) {
         return ResponseEntity.ok(carService.atualizarStatus(id, status));

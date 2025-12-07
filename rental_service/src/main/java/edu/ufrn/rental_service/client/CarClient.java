@@ -18,7 +18,7 @@ public class CarClient {
     }
 
     public void atualizarStatus(Long carId, String status) {
-        restTemplate.patchForObject(
+        restTemplate.postForObject(
                 CAR_SERVICE_URL + "/" + carId + "/status?status=" + status,
                 null,
                 CarResponse.class
